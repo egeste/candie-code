@@ -23,7 +23,7 @@ console.log('## if/else/if statements')
 console.log()
 
 if (true)                     console.log(' - if/else/if (true)')
-else if ('andie' === 'steve') console.log(' - if/else/if (anbdie === steve)')
+else if ('andie' === 'steve') console.log(' - if/else/if (andie === steve)')
 else                          console.log(' - if/else/if (else)')
 
 console.log()
@@ -42,7 +42,11 @@ console.log()
 console.log('## for loop', { cycles })
 console.log()
 
-for (let i = 0; i < cycles; i++) {
+for (
+  let i = 0;  // Start a counter called `i` at 0
+  i < cycles; // Check that `i` is less than `cycles` (2)
+  i++         // After the logic has run, increment `i`
+) {
   console.log(' - for loop', i)
 }
 
@@ -50,6 +54,8 @@ console.log()
 console.log('## do/while loop', { cycles })
 console.log()
 
-let i = 0
-do { console.log(' - do/while', i++) }
-while (i < cycles)
+let i = 2
+do {
+  console.log(' - do/while', i)
+  i-- // i = i - 1
+} while (i < cycles && i > -1)
